@@ -1,30 +1,46 @@
 import Cards from "./slider.js";
+/* const cardOne:HTMLElement = document.getElementById("cardOne")!;
+const cardTwo:HTMLElement = document.getElementById("cardTwo")!;
+const cardThree:HTMLElement = document.getElementById("cardThree")!;
+const cardFour:HTMLElement = document.getElementById("cardFour")!;
+const cardFive:HTMLElement = document.getElementById("cardFive")!;
+const cardSix:HTMLElement = document.getElementById("cardSix")!; */
 //Cards HTML
-var cardOne = document.getElementById("cardOne");
-var cardTwo = document.getElementById("cardTwo");
-var cardThree = document.getElementById("cardThree");
-var cardFour = document.getElementById("cardFour");
-var cardFive = document.getElementById("cardFive");
-var cardSix = document.getElementById("cardSix");
+var card = document.querySelectorAll(".container__subContainer");
+var ArrayCards = [];
+card.forEach(function (item) {
+    ArrayCards.push(item);
+});
+//Create the new instance
+var slideAuto = new Cards(ArrayCards);
 //Buttons Cards(Next)
 var buttonNext = document.querySelectorAll(".next");
 //Add Event for each button
+/* buttonNext.forEach(btn =>{
+    btn.addEventListener("click", () => slideAuto.nex());
+}) */
 buttonNext.forEach(function (btn) {
-    btn.addEventListener("click", function () { return slideAuto.nex(); });
+    btn.onclick = function () {
+        slideAuto.nex();
+    };
 });
 //Button Cards(Prev)
 var buttonPrev = document.querySelectorAll(".prev");
 //Add Event for each button
+/* buttonPrev.forEach( btn => {
+    btn.addEventListener("click", () => slideAuto.prev());
+}) */
 buttonPrev.forEach(function (btn) {
-    btn.addEventListener("click", function () { return slideAuto.prev(); });
+    btn.onclick = function () {
+        slideAuto.prev();
+    };
 });
-var ArrayCards = [
+/* const ArrayCards:HTMLElement[]=
+[
     cardOne,
     cardTwo,
     cardThree,
     cardFour,
     cardFive,
     cardSix,
-];
-//Create the new instance
-var slideAuto = new Cards(ArrayCards);
+] */

@@ -1,6 +1,6 @@
-class Cards{
-    cards: HTMLElement[];
-    i: number;
+class Cards {
+    private cards: HTMLElement[];
+    private i: number;
     constructor(array:HTMLElement[]){
         //Array cards
         this.cards = array;
