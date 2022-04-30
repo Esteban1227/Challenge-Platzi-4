@@ -11,11 +11,39 @@ body {
   background-color: #f2f2f2;
 }
 
+body textarea {
+  resize: none;
+}
+
 .container {
   width: 100%;
 }
 
+.container__addCard {
+  position: absolute;
+  z-index: 10;
+  left: 20px;
+  top: 20px;
+}
+
+.container__addCard img {
+  width: 30px;
+  cursor: pointer;
+}
+
 .container__subContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background-color: white;
+}
+
+.container__subContainerAdd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,11 +170,87 @@ body {
   margin-top: 30px;
 }
 
+.container__infoDeveloperContainerText label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.container__infoDeveloperContainerText label textarea {
+  border: solid 1px #babacf;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 10px 10px 0px 10px;
+}
+
+.container__infoDeveloperContainerText--subContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container__infoDeveloperContainerText--buttonCreate {
+  background-image: -webkit-gradient(linear, left top, right top, from(#DA22FF), color-stop(51%, #9733EE), to(#DA22FF));
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+  padding: 10px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.container__infoDeveloperContainerText--buttonCreate:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.container__infoDeveloperContainerText--inputsCreate label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.container__infoDeveloperContainerText--inputsCreate label input {
+  width: 160px;
+  border: solid 1px #babacf;
+  border-radius: 4px;
+  padding: 2px 5px 2px 10px;
+}
+
 .container__backgroundFooter {
   width: 300px;
   margin: auto;
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
 }
 
 .container__backgroundFooter img {
@@ -230,11 +334,30 @@ body {
             box-shadow: 4px 4px 0px #0000001c;
     border-radius: 10px;
   }
+  .container__subContainerAdd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 950px;
+    min-width: 800px;
+    height: 500px;
+    background-color: white;
+    -webkit-box-shadow: 4px 4px 0px #0000001c;
+            box-shadow: 4px 4px 0px #0000001c;
+    border-radius: 10px;
+  }
   .container__backgroundFooter {
     width: 100%;
   }
   .container__backgroundFooter img {
-    width: 300px;
+    width: 280px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

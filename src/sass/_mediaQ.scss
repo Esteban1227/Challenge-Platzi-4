@@ -55,10 +55,21 @@
             box-shadow: 4px 4px 0px #0000001c;
             border-radius: 10px;
         }
+        &__subContainerAdd{
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 950px;
+            min-width: 800px;
+            height: 500px;
+            background-color: $White;
+            box-shadow: 4px 4px 0px #0000001c;
+            border-radius: 10px;
+        }
         &__backgroundFooter{
             width: 100%;
             img{
-                width: 300px;
+                width: 280px;
             }
         }
     }

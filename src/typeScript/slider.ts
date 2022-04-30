@@ -1,9 +1,11 @@
 class Cards {
     private cards: HTMLElement[];
     private i: number;
-    constructor(array:HTMLElement[]){
+    private cardCreate: HTMLElement;
+    constructor(array:HTMLElement[], CardCreate:HTMLElement){
         //Array cards
         this.cards = array;
+        this.cardCreate = CardCreate;
         //Iterator
         this.i = 0;
     }
@@ -62,6 +64,64 @@ class Cards {
             //Add Animation
             this.cards[this.i].classList.add("animate__slideInRight");
         }
+    }
+
+    //method CreateCard
+
+    open(){
+        this.cardCreate.style.display ="flex"
+        this.cards[this.i].style.display ="none"
+    }
+    close(){
+        this.cardCreate.style.display ="none"
+        this.cards[this.i].style.display ="flex"
+    }
+
+    createCard(position:Element ,text:string,name:string,profession:String,photo?:string){ 
+        const modelCard = document.createElement("section")
+        position.insertAdjacentElement("afterbegin", modelCard)
+        modelCard.className ="container__subContainer animate__animated"
+        modelCard.id ="newCard"
+        modelCard.style.display = "none"
+        const newCard:HTMLElement = document.getElementById("newCard")!;
+        newCard.innerHTML = 
+        `<div class="container__addCard">
+            <img src="./assets/plus.png" alt="">
+        </div>
+        <section class="container__photoDeveloper">
+            <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
+                <img class="container__photoDeveloper--photo" src="./assets/image-john.jpg" alt="">
+                <div class="container__slider">
+                    <div class="container__slider--left prev" id="prev">
+                        <img src="./assets/icon-prev.svg" alt="">
+                    </div>
+                    <div class="container__slider--right next"  id="next">
+                        <img src="./assets/icon-next.svg" alt="">
+                    </div>
+                </div>
+        </section>
+        <section class="container__infoDeveloper">
+            <img src="./assets/pattern-quotes.svg" alt="" class="container__infoDeveloper--background">
+            <div class="container__infoDeveloperContainerText">
+                <p class="container__infoDeveloper--biographyDeveloper">“${text}”
+                </p>
+                <p class="container__infoDeveloper--nameDeveloper">
+                    ${name} <br>
+                    <span>${profession}</span>   
+                </p>
+            </div>
+        </section>
+        <section class="container__backgroundFooter">
+            <img src="./assets/pattern-curve.svg" alt="">
+        </section>     
+        </section>`
+        this.cardCreate.style.display="none"
+        newCard.style.display = "flex";
+        /* this.cards[this.i].style.display="flex" */
+        this.cards[this.i].classList.remove("animate__shakeX");
+        this.cards[this.i].classList.remove("animate__slideInRight");
+        this.cards.unshift(newCard)
+        return newCard
     }
 }
 

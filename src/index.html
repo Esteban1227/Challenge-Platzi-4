@@ -9,9 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="container">
+    <main class="container" id="position">
+
         <!-- card #1 -->
-        <section class="container__subContainer animate__animated" style="display: flex;" id="cardOne">
+        <section class="container__subContainer animate__animated" style="display: flex;">
+            <div class="container__addCard">
+                <img src="./assets/plus.png" alt="">
+            </div>
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-john.jpg" alt="">
@@ -44,7 +48,7 @@
         </section>
 
         <!-- card #2 -->
-        <section class="container__subContainer animate__animated" style="display: none;" id="cardTwo">
+        <section class="container__subContainer animate__animated" style="display: none;">
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-tanya.jpg" alt="">
@@ -76,7 +80,7 @@
         </section>
 
         <!-- card #3 -->
-        <section class="container__subContainer animate__animated" style="display: none;" id="cardThree">
+        <section class="container__subContainer animate__animated" style="display: none;">
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-john.jpg" alt="">
@@ -109,7 +113,7 @@
         </section>
 
         <!-- card #4 -->
-        <section class="container__subContainer animate__animated" style="display: none;" id="cardFour">
+        <section class="container__subContainer animate__animated" style="display: none;">
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-tanya.jpg" alt="">
@@ -141,7 +145,7 @@
         </section>
 
         <!-- card #5 -->
-        <section class="container__subContainer animate__animated" style="display: none;" id="cardFive">
+        <section class="container__subContainer animate__animated" style="display: none;">
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-john.jpg" alt="">
@@ -174,7 +178,7 @@
         </section>
 
         <!-- card #6 -->
-        <section class="container__subContainer animate__animated" style="display: none;" id="cardSix">
+        <!-- <section class="container__subContainer animate__animated" style="display: none;">
             <section class="container__photoDeveloper">
                 <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
                     <img class="container__photoDeveloper--photo" src="./assets/image-tanya.jpg" alt="">
@@ -203,8 +207,74 @@
             <section class="container__backgroundFooter">
                 <img src="./assets/pattern-curve.svg" alt="">
             </section>     
-        </section>
+        </section> -->
 
+        <!-- card #7 -->
+        <!-- <section class="container__subContainer animate__animated" style="display: none;">
+            <section class="container__photoDeveloper">
+                <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
+                    <img class="container__photoDeveloper--photo" src="./assets/image-tanya.jpg" alt="">
+                    <div class="container__slider">
+                        <div class="container__slider--left prev" id="prevSix">
+                            <img src="./assets/icon-prev.svg" alt="">
+                        </div>
+                        <div class="container__slider--right next" id="nextSix">
+                            <img src="./assets/icon-next.svg" alt="" >
+                        </div>
+                    </div>
+            </section>
+            <section class="container__infoDeveloper" >
+                <img src="./assets/pattern-quotes.svg" alt="" class="container__infoDeveloper--background">
+                <div class="container__infoDeveloperContainerText">
+                    <p class="container__infoDeveloper--biographyDeveloper">“ I’ve been interested in coding for a while but never taken the jump, until
+                        now. I couldn’t recommend this course enough. I’m now in the job of my
+                        dreams and so excited about the future. ” 
+                    </p>
+                    <p class="container__infoDeveloper--nameDeveloper">
+                        Tanya Sinclair <br>
+                        <span>UX Engineer</span>   
+                    </p>
+                </div>
+            </section>
+            <section class="container__backgroundFooter">
+                <img src="./assets/pattern-curve.svg" alt="">
+            </section>     
+        </section> -->
+
+        <section class="container__subContainerAdd animate__animated" id="createCards" style="display: none;">
+            <div class="container__addCard" id="closeCreateCard">
+                <img src="./assets/cancel.png" alt="">
+            </div>
+            <section class="container__photoDeveloper">
+                <img class="container__photoDeveloper--background" src=".//assets/pattern-bg.svg" alt="">
+                    <img class="container__photoDeveloper--photo" src="./assets/image-john.jpg" alt="">
+            </section>
+            <section class="container__infoDeveloper">
+                <img src="./assets/pattern-quotes.svg" alt="" class="container__infoDeveloper--background">
+                <div class="container__infoDeveloperContainerText">
+                    <label for="textDescription">
+                        Descripcion
+                        <textarea name="" id="textDescription" cols="50" rows="10" placeholder="Escribe tu descripción"></textarea>
+                    </label>
+                    <div class="container__infoDeveloperContainerText--subContainer">
+                        <div class="container__infoDeveloperContainerText--inputsCreate">
+                            <label for="nameCreate">
+                                Nombre
+                                <input type="text" id="nameCreate">
+                            </label>
+                            <label for="professionCreate">
+                                Profesión
+                                <input type="text" id="professionCreate">
+                            </label>
+                        </div>
+                        <div class="container__infoDeveloperContainerText--buttonCreate" id="buttonCreateCard">Crear</div>
+                    </div>
+                </div>
+            </section>
+            <section class="container__backgroundFooter">
+                <img src="./assets/pattern-curve.svg" alt="">
+            </section>     
+        </section>
         
 
         

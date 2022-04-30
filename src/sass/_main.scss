@@ -1,6 +1,22 @@
 .container{
     width: 100%;
+    &__addCard{
+        position: absolute;
+        z-index: 10;
+        left: 20px;
+        top: 20px;
+        img{
+            width: 30px;
+            cursor: pointer;
+        }
+    }
     &__subContainer{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: $White;
+    }
+    &__subContainerAdd{
         display: flex;
         flex-direction: column;
         position: relative;
@@ -81,12 +97,63 @@
     }
     &__infoDeveloperContainerText{
         margin-top: 30px;
+            label{
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                font-size: 12px;
+                padding: 10px;
+                textarea{
+                    border: solid 1px $GrayishBlue;
+                    border-radius: 4px;
+                    font-size: 15px;
+                    padding: 10px 10px 0px 10px;
+                }
+            }
+        &--subContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &--buttonCreate{
+            background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+            padding: 10px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            cursor: pointer;
+            &:hover{
+                background-position: right center; /* change the direction of the change here */
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        &--inputsCreate{
+            label{
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                font-size: 12px;
+                padding: 10px;
+                input{
+                    width: 160px;
+                    border: solid 1px $GrayishBlue;
+                    border-radius: 4px;
+                    padding: 2px 5px 2px 10px;
+                }
+            }
+        }
     }
     &__backgroundFooter{
         width: 300px;
         margin: auto;
         position: absolute;
-        bottom: 0;
+        bottom: -4px;
         img{
             width: 170px;
         }
