@@ -74,12 +74,9 @@ class Cards {
     }
     createCard(position, text, name, profession, photo) {
         const modelCard = document.createElement("section");
-        position.insertAdjacentElement("afterbegin", modelCard);
-        modelCard.className = "container__subContainer animate__animated";
-        modelCard.id = "newCard";
-        modelCard.style.display = "none";
-        const newCard = document.getElementById("newCard");
-        newCard.innerHTML =
+        position.appendChild(modelCard);
+        modelCard.className = 'container__subContainer animate__animated';
+        modelCard.innerHTML =
             `<div class="container__addCard">
             <img src="./assets/plus.png" alt="">
         </div>
@@ -90,7 +87,7 @@ class Cards {
                     <div class="container__slider--left prev" id="prev">
                         <img src="./assets/icon-prev.svg" alt="">
                     </div>
-                    <div class="container__slider--right next"  id="next">
+                    <div class="container__slider--right next" id="next">
                         <img src="./assets/icon-next.svg" alt="">
                     </div>
                 </div>
@@ -110,13 +107,14 @@ class Cards {
             <img src="./assets/pattern-curve.svg" alt="">
         </section>     
         </section>`;
+        modelCard.style.display = "flex";
         this.cardCreate.style.display = "none";
-        newCard.style.display = "flex";
-        /* this.cards[this.i].style.display="flex" */
         this.cards[this.i].classList.remove("animate__shakeX");
         this.cards[this.i].classList.remove("animate__slideInRight");
-        this.cards.unshift(newCard);
-        return newCard;
+        this.i = 0;
+        this.cards.unshift(modelCard);
+        console.log(this.cards);
+        return modelCard;
     }
 }
 export default Cards;

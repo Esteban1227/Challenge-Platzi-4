@@ -21,10 +21,26 @@ buttonCloseCreateCard.onclick = () =>{
     slideAuto.close()
 }
 
-buttonCreateCard.onclick = () =>{
-    slideAuto.createCard(position,valueDescription.value,valueName.value,valueProfession.value)
-    const buttonPrevCreateCard:HTMLElement = document.getElementById("prev")!;
-    const buttonNextCreateCard:HTMLElement = document.getElementById("next")!;
-    buttonNextCreateCard.onclick = () => {slideAuto.nex()}
-    buttonPrevCreateCard.onclick = () => {slideAuto.prev()}
-}
+buttonCreateCard.addEventListener("click", () =>{
+    slideAuto.createCard(position,valueDescription.value,valueName.value,valueProfession.value);       
+    const arrayButtonNext:NodeListOf<HTMLElement> = document.querySelectorAll(".next");
+    const buttonNext:HTMLElement[] = []
+        arrayButtonNext.forEach(btn =>{
+            buttonNext.push(btn)
+        })
+    buttonNext.forEach(btn =>{
+        btn.onclick = () =>{
+            slideAuto.nex()
+        }
+    })
+    const arrayButtonPrev:NodeListOf<HTMLElement> = document.querySelectorAll(".prev");
+    const buttonPrev:HTMLElement[] = []
+        arrayButtonPrev.forEach(btn => {
+            buttonPrev.push(btn)
+        })
+        buttonPrev.forEach(btn =>{
+            btn.onclick = () =>{
+                slideAuto.prev()
+            }
+        })
+})

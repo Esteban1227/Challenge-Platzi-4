@@ -16,10 +16,26 @@ buttonOpenCreateCard.forEach(btn => {
 buttonCloseCreateCard.onclick = () => {
     slideAuto.close();
 };
-buttonCreateCard.onclick = () => {
+buttonCreateCard.addEventListener("click", () => {
     slideAuto.createCard(position, valueDescription.value, valueName.value, valueProfession.value);
-    const buttonPrevCreateCard = document.getElementById("prev");
-    const buttonNextCreateCard = document.getElementById("next");
-    buttonNextCreateCard.onclick = () => { slideAuto.nex(); };
-    buttonPrevCreateCard.onclick = () => { slideAuto.prev(); };
-};
+    const arrayButtonNext = document.querySelectorAll(".next");
+    const buttonNext = [];
+    arrayButtonNext.forEach(btn => {
+        buttonNext.push(btn);
+    });
+    buttonNext.forEach(btn => {
+        btn.onclick = () => {
+            slideAuto.nex();
+        };
+    });
+    const arrayButtonPrev = document.querySelectorAll(".prev");
+    const buttonPrev = [];
+    arrayButtonPrev.forEach(btn => {
+        buttonPrev.push(btn);
+    });
+    buttonPrev.forEach(btn => {
+        btn.onclick = () => {
+            slideAuto.prev();
+        };
+    });
+});

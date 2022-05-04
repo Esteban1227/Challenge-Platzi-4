@@ -8,5 +8,5 @@ card.forEach(item => {
     ArrayCards.push(item);
 });
 export const slideAuto = new Cards(ArrayCards, cardCreteNewCard);
-addForEachButtonNext();
 addForEachButtonPrev();
+addForEachButtonNext();

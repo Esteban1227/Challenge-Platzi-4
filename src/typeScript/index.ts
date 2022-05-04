@@ -11,5 +11,5 @@ card.forEach(item =>{
 })
 
 export const slideAuto:Cards = new Cards(ArrayCards,cardCreteNewCard);
-addForEachButtonNext()
 addForEachButtonPrev()
+addForEachButtonNext()
